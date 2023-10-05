@@ -10,7 +10,7 @@ function changeCity(city) {
 function handleSubmit(event) {
   event.preventDefault();
   let city = document.querySelector("#city-search").value;
-  search(city);
+  changeCity(city);
 }
 
 function showTemperature(response) {
@@ -68,7 +68,7 @@ let dateAndTime = document.querySelector("#date-and-time");
 dateAndTime.innerHTML = `${weekday}, ${time}`;
 
 let form = document.querySelector("#search-form");
-form.addEventListener("submit", changeCity);
+form.addEventListener("submit", handleSubmit);
 
 document
   .querySelector("#current-location-btn")

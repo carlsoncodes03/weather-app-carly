@@ -28,9 +28,7 @@ function showTemperature(response) {
   //let uvIndexElement = document.querySelector("#uv-index");
 }
 
-function showLocation(position) {
-  console.log(position);
-  navigator.geolocation.getCurrentPosition(showLocation);
+function getPosition(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
   let units = "metric";
@@ -38,6 +36,11 @@ function showLocation(position) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
   console.log(apiUrl);
   axios.get(`${apiUrl}`).then(showTemperature);
+}
+
+function showLocation(position) {
+  console.log(position);
+  navigator.geolocation.getCurrentPosition(getPosition);
 }
 
 let now = new Date();

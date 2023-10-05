@@ -71,4 +71,4 @@ document
   .querySelector("#current-location-btn")
   .addEventListener("click", showLocation);
 
-//changeCity("New York");
+changeCity("New York");

@@ -31,7 +31,7 @@ function showTemperature(response) {
 function getPosition(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
-  let units = "metric";
+  let units = "imperial";
   let apiKey = "6010503ffcf1560b8aef47f39758b9ba";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
   console.log(apiUrl);
@@ -68,7 +68,7 @@ let dateAndTime = document.querySelector("#date-and-time");
 dateAndTime.innerHTML = `${weekday}, ${time}`;
 
 let form = document.querySelector("#search-form");
-form.addEventListener("submit", changeCity);
+form.addEventListener("submit", handleSubmit);
 
 document
   .querySelector("#current-location-btn")

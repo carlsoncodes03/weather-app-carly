@@ -1,5 +1,3 @@
-import axios from "axios";
-
 function changeCity(city) {
   let units = "imperial";
   let apiKey = "6010503ffcf1560b8aef47f39758b9ba";

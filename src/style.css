@@ -104,6 +104,9 @@ li {
   border: 2px solid rgb(158, 210, 190);
   background: rgba(126, 170, 146, 0.7);
 }
+.days {
+  font-weight: 700;
+}
 .github-link {
   color: black;
   margin-left: 45%;

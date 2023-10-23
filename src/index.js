@@ -31,7 +31,6 @@ function showTemperature(response) {
     "src",
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-  console.log(response.data.weather[0].icon);
 }
 
 function getPosition(position) {
@@ -40,7 +39,6 @@ function getPosition(position) {
   let units = "imperial";
   let apiKey = "6010503ffcf1560b8aef47f39758b9ba";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
-  console.log(apiUrl);
   axios.get(`${apiUrl}`).then(showTemperature);
 }
 

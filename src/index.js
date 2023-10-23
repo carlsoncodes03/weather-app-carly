@@ -24,6 +24,8 @@ function showTemperature(response) {
     response.data.wind.speed
   );
   //let uvIndexElement = document.querySelector("#uv-index");
+  document.querySelector("#weather-icon").innerHTML =
+    response.data.weather[0].icon;
 }
 
 function getPosition(position) {

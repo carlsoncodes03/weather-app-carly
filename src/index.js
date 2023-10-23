@@ -24,8 +24,10 @@ function showTemperature(response) {
     response.data.wind.speed
   );
   //let uvIndexElement = document.querySelector("#uv-index");
-  document.querySelector("#weather-icon").innerHTML =
-    response.data.weather[0].icon;
+  iconElement.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function getPosition(position) {

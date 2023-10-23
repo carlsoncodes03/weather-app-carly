@@ -19,8 +19,9 @@ function showTemperature(response) {
   );
   document.querySelector("#weather-description").innerHTML =
     response.data.weather[0].main;
-  document.querySelector("#feels-like").innerHTML =
-    response.data.main.feels_like;
+  document.querySelector("#feels-like").innerHTML = Math.round(
+    response.data.main.feels_like
+  );
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind-speed").innerHTML = Math.round(
     response.data.wind.speed

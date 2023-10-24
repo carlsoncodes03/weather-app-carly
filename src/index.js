@@ -98,6 +98,8 @@ function showFahrenheitTemp(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#current-temperature");
   temperatureElement.innerHTML = Math.round(fahrenheitTemp);
+  celciusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
 }
 
 let fahrenheitTemp = null;

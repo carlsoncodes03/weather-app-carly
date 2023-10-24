@@ -56,6 +56,7 @@ if (hours < 10) {
 if (minutes < 10) {
   minutes = `0${minutes}`;
 }
+
 function futureDays() {
   let dayNames = [
     "Sunday",

@@ -90,6 +90,8 @@ function showCelciusTemp(event) {
   let temperatureElement = document.querySelector("#current-temperature");
   let celciusTemp = ((fahrenheitTemp - 32) * 5) / 9;
   temperatureElement.innerHTML = Math.round(celciusTemp);
+  fahrenheitLink.classList.remove("active");
+  celciusLink.classList.add("active");
 }
 
 function showFahrenheitTemp(event) {

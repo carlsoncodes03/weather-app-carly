@@ -119,3 +119,8 @@ li {
 #celcius-link {
   text-decoration: none;
 }
+
+.units .active {
+  color: black;
+  cursor: default;
+}

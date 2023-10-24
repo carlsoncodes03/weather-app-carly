@@ -12,7 +12,6 @@ function handleSubmit(event) {
 }
 
 function showTemperature(response) {
-  console.log(response.data);
   document.querySelector("#weather-location").innerHTML = response.data.name;
   document.querySelector("#current-temperature").innerHTML = Math.round(
     response.data.main.temp
@@ -85,5 +84,25 @@ document
   .querySelector("#current-location-btn")
   .addEventListener("click", showLocation);
 
+function showCelciusTemp(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#current-temperature");
+  let celciusTemp = ((fahrenheitTemp - 32) * 5) / 9;
+  temperatureElement.innerHTML = Math.round(celciusTemp);
+}
+
+function showFahrenheitTemp(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#current-temperature");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemp);
+}
+
+let fahrenheitTemp = null;
+
+let celciusLink = document.querySelector("#celcius-link");
+celciusLink.addEventListener("click", showCelciusTemp);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheitTemp);
+
 changeCity("New York");
-futureDays();

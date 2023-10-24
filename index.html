@@ -61,7 +61,7 @@
         <div class="row">
           <div class="col-4">
             <span class="temperature" id="current-temperature"></span>
-            <span class="units"> °F | °C</span>
+            <span class="units"><a href="#" id="fahrenheit-link">°F</a> | <a href="#" id="celcius-link">°C</a>
           </div>
           <div class="col-4 weather" id="weather-description"></div>
           <div class="col-4">
@@ -72,16 +72,16 @@
           </div>
         </div>
         <ul>
-          <li>Feels like: <span id="feels-like"></span>°F</li>
+          <li>Feels like: <a href="#" class="units" id="feels-like">°F</a></li>
           <li>Humidity: <span id="humidity"></span>%</li>
           <li>Wind Speed: <span id="wind-speed"></span>MPH</li>
         </ul>
         <div class="row gx-5 forcast fixed">
           <div class="col-sm p-2">
             <div class="days" id="day0"></div>
-            <div>high</div>
-            <div><i class="fa-solid fa-cloud-sun"></i></div>
-            <div>low</div>
+            <div class="highTemp"></div>
+            <div class="icon"></div>
+            <div class="lowTemp"></div>
           </div>
           <div class="col-sm p-2">
             <div class="days" id="day1"></div>

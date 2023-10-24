@@ -111,3 +111,11 @@ li {
   color: black;
   margin-left: 45%;
 }
+
+#fahrenheit-link {
+  text-decoration: none;
+}
+
+#celcius-link {
+  text-decoration: none;
+}

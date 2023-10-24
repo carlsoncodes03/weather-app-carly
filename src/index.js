@@ -92,7 +92,7 @@ function showCelciusTemp(event) {
   let celciusTemp = ((fahrenheitTemp - 32) * 5) / 9;
   temperatureElement.innerHTML = Math.round(celciusTemp);
   let feelsLikeElement = document.querySelector("#feels-like");
-  let celciusFeelsLike = (((fahrenheitRealFeel - 32) * 5) / 9) + "°C");
+  let celciusFeelsLike = (fahrenheitRealFeel - 32) * 5) / 9);
   feelsLikeElement.innerHTML = Math.round(celciusFeelsLike);
 }
 

@@ -67,11 +67,11 @@ let dayNames = [
   "Saturday",
 ];
 let weekday = dayNames[now.getDay()];
-document.querySelector("#day0").innerHTML = dayNames[now.getDay() + 1];
-document.querySelector("#day1").innerHTML = dayNames[now.getDay() + 2];
-document.querySelector("#day2").innerHTML = dayNames[now.getDay() + 3];
-document.querySelector("#day3").innerHTML = dayNames[now.getDay() + 4];
-document.querySelector("#day4").innerHTML = dayNames[now.getDay() + 5];
+document.querySelector("#day0").innerHTML = dayNames[now.getDay() + 2];
+document.querySelector("#day1").innerHTML = dayNames[now.getDay() + 3];
+document.querySelector("#day2").innerHTML = dayNames[now.getDay() + 4];
+document.querySelector("#day3").innerHTML = dayNames[now.getDay() + 5];
+document.querySelector("#day4").innerHTML = dayNames[now.getDay() + 6];
 
 let time = `${hours}:${minutes}`;
 let dateAndTime = document.querySelector("#date-and-time");
@@ -110,3 +110,35 @@ let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", showFahrenheitTemp);
 
 changeCity("New York");
+
+let forecast = document.querySelector("#forecast");
+forecast.innerHTML = ` <div class="col-sm p-2">
+            <div class="days" id="day0">Day</div>
+            <div class="high">High</div>
+            <div class="icon">/</div>
+            <div class="low">Low</div>
+          </div>
+          <div class="col-sm p-2">
+            <div class="days" id="day1">Day</div>
+            <div class="high">high</div>
+            <div><i class="fa-solid fa-sun"></i></div>
+            <div class="low">low</div>
+          </div>
+          <div class="col-sm p-2">
+            <div class="days" id="day2"></div>
+            <div class="high">high</div>
+            <div><i class="fa-solid fa-cloud-bolt"></i></div>
+            <div class="low">low</div>
+          </div>
+          <div class="col-sm p-2">
+            <div class="days" id="day3"></div>
+            <div class="high">high</div>
+            <div><i class="fa-solid fa-cloud-sun-rain"></i></div>
+            <div class="low">low</div>
+          </div>
+          <div class="col-sm p-2">
+            <div class="days" id="day4"></div>
+            <div class="high">high</div>
+            <div><i class="fa-solid fa-umbrella"></i></div>
+            <div class="low">low</div>
+          </div> `;

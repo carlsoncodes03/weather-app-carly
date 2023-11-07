@@ -124,6 +124,10 @@ li {
   color: black;
   cursor: default;
 }
+.high {
+  font-size: 18px;
+}
 .low {
   opacity: 70%;
+  font-size: 18px;
 }

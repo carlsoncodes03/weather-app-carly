@@ -67,11 +67,6 @@ let dayNames = [
   "Saturday",
 ];
 let weekday = dayNames[now.getDay()];
-document.querySelector("#day0").innerHTML = dayNames[now.getDay() + 2];
-document.querySelector("#day1").innerHTML = dayNames[now.getDay() + 3];
-document.querySelector("#day2").innerHTML = dayNames[now.getDay() + 4];
-document.querySelector("#day3").innerHTML = dayNames[now.getDay() + 5];
-document.querySelector("#day4").innerHTML = dayNames[now.getDay() + 6];
 
 let time = `${hours}:${minutes}`;
 let dateAndTime = document.querySelector("#date-and-time");

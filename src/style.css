@@ -124,3 +124,6 @@ li {
   color: black;
   cursor: default;
 }
+.low {
+  opacity: 70%;
+}

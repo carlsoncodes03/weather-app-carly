@@ -57,27 +57,25 @@ if (minutes < 10) {
   minutes = `0${minutes}`;
 }
 
-function futureDays() {
-  let dayNames = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-  let weekday = dayNames[now.getDay()];
-  document.querySelector("#day0").innerHTML = dayNames[now.getDay() + 1];
-  document.querySelector("#day1").innerHTML = dayNames[now.getDay() + 2];
-  document.querySelector("#day2").innerHTML = dayNames[now.getDay() + 3];
-  document.querySelector("#day3").innerHTML = dayNames[now.getDay() + 4];
-  document.querySelector("#day4").innerHTML = dayNames[now.getDay() + 5];
+let dayNames = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+let weekday = dayNames[now.getDay()];
+document.querySelector("#day0").innerHTML = dayNames[now.getDay() + 1];
+document.querySelector("#day1").innerHTML = dayNames[now.getDay() + 2];
+document.querySelector("#day2").innerHTML = dayNames[now.getDay() + 3];
+document.querySelector("#day3").innerHTML = dayNames[now.getDay() + 4];
+document.querySelector("#day4").innerHTML = dayNames[now.getDay() + 5];
 
-  let time = `${hours}:${minutes}`;
-  let dateAndTime = document.querySelector("#date-and-time");
-  dateAndTime.innerHTML = `${weekday}, ${time}`;
-}
+let time = `${hours}:${minutes}`;
+let dateAndTime = document.querySelector("#date-and-time");
+dateAndTime.innerHTML = `${weekday}, ${time}`;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);

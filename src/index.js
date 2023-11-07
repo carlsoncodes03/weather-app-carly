@@ -98,14 +98,24 @@ function showFahrenheitTemp(event) {
 
 function displayForecast() {
   let forecast = document.querySelector("#forecast");
-  forecast.innerHTML = ` 
+
+  let days = ["Wed", "Thu", "Fri", "Sat", "Sun"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      ` 
           <div class="col-sm p-2">
-            <div class="days" id="day1">Day</div>
+            <div class="days" id="day1">${day}</div>
             <div class="high">high</div>
             <div><i class="fa-solid fa-sun"></i></div>
             <div class="low">low</div>
           </div>
            `;
+  });
+
+  forecastElement.innerHTML = forecastHtml;
 }
 
 let fahrenheitTemp = null;

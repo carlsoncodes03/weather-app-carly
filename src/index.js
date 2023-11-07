@@ -96,6 +96,18 @@ function showFahrenheitTemp(event) {
   fahrenheitLink.classList.add("active");
 }
 
+function displayForecast() {
+  let forecast = document.querySelector("#forecast");
+  forecast.innerHTML = ` 
+          <div class="col-sm p-2">
+            <div class="days" id="day1">Day</div>
+            <div class="high">high</div>
+            <div><i class="fa-solid fa-sun"></i></div>
+            <div class="low">low</div>
+          </div>
+           `;
+}
+
 let fahrenheitTemp = null;
 
 let celciusLink = document.querySelector("#celcius-link");
@@ -105,35 +117,4 @@ let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", showFahrenheitTemp);
 
 changeCity("New York");
-
-let forecast = document.querySelector("#forecast");
-forecast.innerHTML = ` <div class="col-sm p-2">
-            <div class="days" id="day0">Day</div>
-            <div class="high">High</div>
-            <div class="icon">/</div>
-            <div class="low">Low</div>
-          </div>
-          <div class="col-sm p-2">
-            <div class="days" id="day1">Day</div>
-            <div class="high">high</div>
-            <div><i class="fa-solid fa-sun"></i></div>
-            <div class="low">low</div>
-          </div>
-          <div class="col-sm p-2">
-            <div class="days" id="day2"></div>
-            <div class="high">high</div>
-            <div><i class="fa-solid fa-cloud-bolt"></i></div>
-            <div class="low">low</div>
-          </div>
-          <div class="col-sm p-2">
-            <div class="days" id="day3"></div>
-            <div class="high">high</div>
-            <div><i class="fa-solid fa-cloud-sun-rain"></i></div>
-            <div class="low">low</div>
-          </div>
-          <div class="col-sm p-2">
-            <div class="days" id="day4"></div>
-            <div class="high">high</div>
-            <div><i class="fa-solid fa-umbrella"></i></div>
-            <div class="low">low</div>
-          </div> `;
+displayForecast();

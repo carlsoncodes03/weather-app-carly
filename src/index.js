@@ -107,10 +107,10 @@ function displayForecast() {
       forecastHtml +
       ` 
           <div class="col-sm p-2">
-            <div class="days" id="day1">${day}</div>
+            <div class="days" id="day1">Sat</div>
             <div class="high">high</div>
             <div><i class="fa-solid fa-sun"></i></div>
-            <div class="low">low</div>
+            <div class="low">${day.temperature.minimum}</div>
           </div>
            `;
   });

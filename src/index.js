@@ -97,7 +97,6 @@ function showFahrenheitTemp(event) {
 }
 
 function displayForecast() {
-  console.log(response.data)
   let forecastElement = document.querySelector("#forecast");
 
   let days = ["Wed", "Thu", "Fri", "Sat", "Sun"];

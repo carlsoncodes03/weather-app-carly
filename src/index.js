@@ -96,7 +96,7 @@ function showFahrenheitTemp(event) {
   fahrenheitLink.classList.add("active");
 }
 
-function displayForecast() {
+function displayForecast(response) {
   console.log(response.data);
   let forecastElement = document.querySelector("#forecast");
 
